@@ -1,0 +1,30 @@
+{
+    "name": "iamtartan/laravel-hmac-signature",
+    "description": "Laravel HMAC-SHA authentication",
+    "keywords": ["laravel", "HMAC", "HMAC-SHA", "authentication"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aboozar Ghaffari <Tartan>",
+            "email": "iamtartan@gmail.com",
+            "website" : "tartan.tk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tartan\\Signature\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tartan\\Signature\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=5.4",
+        "illuminate/support": "5.x.x"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    }
+}
