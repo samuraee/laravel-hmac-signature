@@ -1,10 +1,10 @@
 # Signature
 
-**A PHP 5.4+ port of the [Signature](https://github.com/mloughran/signature) ruby gem**
+**A laravel HMAC auth package based on [Signature-PHP](https://github.com/philipbrown/signature-php) Philip Brown**
 
-[![Build Status](https://travis-ci.org/philipbrown/signature-php.png?branch=master)](https://travis-ci.org/philipbrown/signature-php)
-[![Code Coverage](https://scrutinizer-ci.com/g/philipbrown/signature-php/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/philipbrown/signature-php/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/philipbrown/signature-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/philipbrown/signature-php/?branch=master)
+[![Build Status](https://travis-ci.org/iamtartan/laravel-hmac-signature.png?branch=master)](https://travis-ci.org/iamtartan/laravel-hmac-signature)
+[![Code Coverage](https://scrutinizer-ci.com/g/iamtartan/laravel-hmac-signature/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/iamtartan/laravel-hmac-signature/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/iamtartan/laravel-hmac-signature/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/iamtartan/laravel-hmac-signature/?branch=master)
 
 ## Installation
 Add `tartan/laravel-hmac-signature` as a requirement to `composer.json`:
