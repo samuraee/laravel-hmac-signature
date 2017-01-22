@@ -15,7 +15,7 @@ $ composer require iamtartan/laravel-hmac-signature
 ## What is HMAC-SHA authentication?
 HMAC-SHA authentication allows you to implement very simple key / secret authentication for your API using hashed signatures.
 
-## Making a request
+## Making a request for api (version **1.0.0**)
 ```php
 use Tartan\Signature\Token;
 use Tartan\Signature\Request;
@@ -26,7 +26,7 @@ $data    = [
     'email'      => 'iamtartan@gmail.com' 
 ];
 $token   = new Token('my_public_key', 'my_private_key');
-$request = new Request('POST', 'signup', $data);
+$request = new Request('POST', 'signup', $data, '1.0.0');
 
 $auth = $request->sign($token);
 
@@ -46,7 +46,7 @@ use Tartan\Signature\Guards\CheckTimestamp;
 use Tartan\Signature\Guards\CheckSignature;
 use Tartan\Signature\Exceptions\SignatureException;
 
-$auth  = new Auth($request->method(), $request->url(), $request->all(), [
+$auth  = new Auth($request->method(), $request->url(), '1.0.0', $request->all(), [
 	new CheckKey,
 	new CheckVersion,
 	new CheckTimestamp,
