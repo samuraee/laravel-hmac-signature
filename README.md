@@ -9,7 +9,7 @@
 ## Installation
 Add `tartan/laravel-hmac-signature` as a requirement to `composer.json`:
 ```bash
-$ composer require tartan/laravel-hmac-signature
+$ composer require iamtartan/laravel-hmac-signature
 ```
 
 ## What is HMAC-SHA authentication?
