@@ -2,7 +2,7 @@
 
 class Request
 {
-    const VERSION = '5.1.2';
+    const VERSION = '1.0.0';
 
     const PREFIX = 'auth_';
 
@@ -27,6 +27,10 @@ class Request
     private $timestamp;
 
     /**
+     * @var string
+     */
+    private $version;
+    /**
      * Create a new Request
      *
      * @param string $method
@@ -34,12 +38,13 @@ class Request
      * @param array $params
      * @param integer $timestamp
      */
-    public function __construct($method, $uri, array $params = [], $timestamp = null)
+    public function __construct($method, $uri, array $params = [], $timestamp = null, $version = null)
     {
         $this->method    = strtoupper($method);
         $this->uri       = $uri;
         $this->params    = $params;
         $this->timestamp = $timestamp ?: time();
+        $this->version   = $version ? $version: self::VERSION;
     }
 
     /**
@@ -52,7 +57,7 @@ class Request
     public function sign(Token $token, $prefix = self::PREFIX)
     {
         $auth = [
-            $prefix . 'version'   => self::VERSION,
+            $prefix . 'version'   => $this->version,
             $prefix . 'key'       => $token->key(),
             $prefix . 'timestamp' => $this->timestamp,
         ];

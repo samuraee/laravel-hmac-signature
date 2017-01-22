@@ -22,7 +22,12 @@ class CheckSignature implements Guard
         }
 
         if ($auth[$prefix . 'signature'] !== $signature[$prefix . 'signature']) {
-            throw new SignatureSignatureException('The signature is not valid');
+            $message = 'The signature is not valid.';
+            // add correct signature during
+            if (config('app.debug') === true) {
+                $message .= ' correct signature is ' . $signature[$prefix . 'signature'];
+            }
+            throw new SignatureSignatureException($message);
         }
 
         return true;

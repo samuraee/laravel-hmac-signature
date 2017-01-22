@@ -13,6 +13,11 @@ class Auth
     private $uri;
 
     /**
+     * @var string
+     */
+    private $version;
+
+    /**
      * @var array
      */
     private $params;
@@ -36,12 +41,13 @@ class Auth
      * @param array $guards
      * @return void
      */
-    public function __construct($method, $uri, array $params, array $guards)
+    public function __construct($method, $uri, $version, array $params, array $guards)
     {
-        $this->method = strtoupper($method);
-        $this->uri    = $uri;
-        $this->params = $params;
-        $this->guards = $guards;
+        $this->method  = strtoupper($method);
+        $this->uri     = $uri;
+        $this->version = $version;
+        $this->params  = $params;
+        $this->guards  = $guards;
     }
 
     /**
@@ -56,7 +62,7 @@ class Auth
         $auth = $this->getAuthParams($prefix);
         $body = $this->getBodyParams($prefix);
 
-        $request   = new Request($this->method, $this->uri, $body, $auth[$prefix . 'timestamp']);
+        $request   = new Request($this->method, $this->uri, $body, $auth[$prefix . 'timestamp'], $this->version);
         $signature = $request->sign($token, $prefix);
 
         foreach ($this->guards as $guard) {
