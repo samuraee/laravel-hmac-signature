@@ -1,6 +1,6 @@
 # Signature
 
-**A laravel HMAC auth package based on [Signature-PHP](https://github.com/philipbrown/signature-php) Philip Brown**
+**A laravel HMAC auth package based on [Signature-PHP](https://github.com/philipbrown/signature-php) **
 
 [![Build Status](https://travis-ci.org/iamtartan/laravel-hmac-signature.png?branch=master)](https://travis-ci.org/iamtartan/laravel-hmac-signature)
 [![Code Coverage](https://scrutinizer-ci.com/g/iamtartan/laravel-hmac-signature/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/iamtartan/laravel-hmac-signature/?branch=master)
