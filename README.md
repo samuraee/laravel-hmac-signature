@@ -3,11 +3,9 @@
 **A laravel HMAC auth package based on [Signature-PHP](https://github.com/philipbrown/signature-php) **
 
 [![Build Status](https://travis-ci.org/iamtartan/laravel-hmac-signature.png?branch=master)](https://travis-ci.org/iamtartan/laravel-hmac-signature)
-[![Code Coverage](https://scrutinizer-ci.com/g/iamtartan/laravel-hmac-signature/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/iamtartan/laravel-hmac-signature/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/iamtartan/laravel-hmac-signature/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/iamtartan/laravel-hmac-signature/?branch=master)
 
 ## Installation
-Add `tartan/laravel-hmac-signature` as a requirement to `composer.json`:
+Add `iamtartan/laravel-hmac-signature` as a requirement to `composer.json`:
 ```bash
 $ composer require iamtartan/laravel-hmac-signature
 ```
