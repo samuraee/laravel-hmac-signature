@@ -78,7 +78,7 @@ class Auth
      * @param $prefix
      * @return array
      */
-    private function getAuthParams($prefix)
+    protected function getAuthParams($prefix)
     {
         return array_intersect_key($this->params, array_flip($this->addPrefix($this->auth, $prefix)));
     }
@@ -89,7 +89,7 @@ class Auth
      * @param $prefix
      * @return array
      */
-    private function getBodyParams($prefix)
+    protected function getBodyParams($prefix)
     {
         return array_diff_key($this->params, array_flip($this->addPrefix($this->auth, $prefix)));
     }
@@ -100,7 +100,7 @@ class Auth
      *
      * @return array
      */
-    private function addPrefix(array $auth, $prefix)
+    protected function addPrefix(array $auth, $prefix)
     {
         return array_map(function ($item) use ($prefix) {
             return $prefix . $item;
